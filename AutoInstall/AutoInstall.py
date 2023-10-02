@@ -361,7 +361,7 @@ class AutoInstall(object):
                 [results_text, self.create_message(uid, 'PRD', 'HOMECARRID', 'RFBAND', 'RSRP', 'download', 'upload')])
 
         # put results to description field
-        self.client.put('config/system/desc', results_text[:1023])
+        self.client.put('config/system/custom1', results_text[:1023])
 
         # Mark as RUN for ONLY_RUN_ONCE flag
         self.client.put('config/system/snmp/persisted_config', 'AutoInstall')
